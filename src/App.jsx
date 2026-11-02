@@ -22,7 +22,6 @@ import {
 import {
   person,
   projects,
-  projectCategories,
   skills,
   leadership,
   leadershipPhotos,
@@ -338,10 +337,6 @@ function Skills() {
   );
 }
 function Projects() {
-  const [filter, setFilter] = useState("All projects");
-  const visible = projects.filter(
-    (p) => filter === "All projects" || p.type === filter,
-  );
   return (
     <section id="projects" className="section projects-section">
       <div className="container">
@@ -356,22 +351,10 @@ function Projects() {
             }
             description="A selection of systems and data projects I’ve built or contributed to."
           />
-          <div className="filter-row" role="group" aria-label="Filter projects">
-            {projectCategories.map((cat) => (
-              <button
-                key={cat}
-                className={filter === cat ? "active" : ""}
-                onClick={() => setFilter(cat)}
-                aria-pressed={filter === cat}
-              >
-                {cat}
-              </button>
-            ))}
-          </div>
         </div>
         <motion.div layout className="projects-grid">
           <AnimatePresence mode="popLayout">
-            {visible.map((p, i) => (
+            {projects.map((p, i) => (
               <motion.article
                 layout
                 key={p.no}
@@ -392,7 +375,6 @@ function Projects() {
                 <div className="project-info">
                   <div className="project-heading">
                     <h3>{p.title}</h3>
-                    <ArrowUpRight size={23} />
                   </div>
                   <h4>{p.subtitle}</h4>
                   <p>{p.description}</p>
