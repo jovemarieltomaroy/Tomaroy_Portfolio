@@ -1,13 +1,13 @@
-// EDIT YOUR PORTFOLIO HERE. Add your photos to public/images/ and update image paths.
 export const person = {
   name: "Jove Mariel Tomaroy",
   firstName: "Jove Mariel",
   initials: "JT",
   eyebrow: "HI, I'M JOVE MARIEL TOMAROY",
+  eyebrowrole: "BS Information Technology · Database Systems",
   role: "IT Student & Database Systems Major",
   headline: "Turning ideas into thoughtful digital experiences.",
   introduction:
-    "A BS Information Technology student majoring in Database Systems, exploring software development, machine learning, and intelligent applications.",
+    "An IT student exploring software development, machine learning, and intelligent applications, with a growing interest in building practical solutions.",
   location: "Iligan City, Philippines",
   email: "jovemariel.r.tomaroy@gmail.com",
   github: "https://github.com/jovemarieltomaroy",
@@ -40,7 +40,7 @@ export const projects = [
     stack: ["React", "Node.js", "MongoDB", "RAG", "Ollama"],
     role: "Team Lead · Full-stack Developer",
     image: "/images/MyGUIDE.jpeg",
-    github: "", // Add the repo URL
+    github: "", 
     live: "",
   },
   {
@@ -74,21 +74,7 @@ export const projects = [
       "Firebase Authentication",
     ],
     role: "Full-Stack Developer",
-    image: "/images/gold-placeholder.svg",
-    github: "",
-    live: "",
-  },
-  {
-    no: "04",
-    title: "Mushroom Classification",
-    type: "AI & data",
-    tag: "MACHINE LEARNING",
-    subtitle: "Classifying mushrooms through data",
-    description:
-      "Created a Logistic Regression model to classify mushrooms from dataset features, including preprocessing, exploratory data analysis, and model evaluation.",
-    stack: ["Python", "Logistic Regression", "Pandas"],
-    role: "Machine Learning Developer",
-    image: "/images/mushroom-placeholder.svg",
+    image: "/images/Inventory.png",
     github: "",
     live: "",
   },
@@ -117,7 +103,6 @@ export const skills = [
     title: "Tools & workflow",
     items: ["Git", "GitHub", "VS Code", "Jupyter Notebook", "Postman"],
   },
-  // Add Figma, Postman, manual QA testing, etc. only if you actually use them.
 ];
 
 export const leadership = [
@@ -154,10 +139,6 @@ export const leadership = [
   },
 ];
 
-// OPTIONAL: Once you confirm your Convention speaker appearance, you can add it here:
-// { year: '2026', role: 'Speaker · Constitution Convention', org: 'Your organization', description: 'Talk topic / contribution', image: '/images/convention.jpg' }
-
-// Add or remove photos here; each entry becomes a complete stacked card.
 export const leadershipPhotos = [
   {
     src: "/images/LeadershipPicture.jpeg",

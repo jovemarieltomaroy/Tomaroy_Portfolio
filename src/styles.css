@@ -222,18 +222,30 @@ img {
 .hero-copy {
   padding: 64px 0;
 }
-
+.eyebrow-container {
+  display: flex;
+  flex-direction: column;
+}
 .eyebrow {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  margin-bottom: 36px;
+  margin-bottom: 10px;
   color: var(--color-accent);
-  font-size: 10px;
+  font-size: 15px;
   font-weight: 600;
   letter-spacing: 2px;
 }
-
+.eyebrow-role {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 36px;
+  color: var(white);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
 .pulse {
   width: 8px;
   height: 8px;
@@ -257,9 +269,17 @@ img {
 }
 
 .hero .hero-copy h1 {
-  font-size: clamp(28px, 3vw, 42px);
-  letter-spacing: -1px;
-  line-height: 1.5;
+  font-size: clamp(36px, 4.5vw, 64px);
+  letter-spacing: -2px;
+  line-height: 1.15;
+}
+
+.hero-connect-description {
+  max-width: 490px;
+  margin: -12px 0 28px;
+  color: var(--color-muted);
+  font-size: 14px;
+  line-height: 1.9;
 }
 
 .hero h1 em,
@@ -449,14 +469,6 @@ img {
   border-radius: 7px;
   background: rgba(209, 174, 114, 0.1);
   color: var(--color-accent);
-}
-
-.orbit-decoration {
-  position: absolute;
-  top: 14%;
-  left: -24px;
-  color: var(--color-accent);
-  font-size: 36px;
 }
 
 .hero-bottom {

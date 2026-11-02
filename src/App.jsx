@@ -144,7 +144,7 @@ function Header() {
                 onClick={() => setOpen(false)}
               >
                 {label}
-                <ArrowUpRight size={17} />
+              
               </a>
             ))}
             <a href={person.resume} download onClick={() => setOpen(false)}>
@@ -163,21 +163,21 @@ function Home() {
       <div className="container hero-grid">
         <div className="hero-copy">
           <Reveal>
-            <div className="eyebrow">{person.eyebrow}</div>
+            <div className="eyebrow-container">
+              <div className="eyebrow">{person.eyebrow}</div>
+              <div className="eyebrow-role">{person.eyebrowrole}</div>
+            </div>
             <h1>
-              Building Web Applications
+              Let’s make
               <br />
-              <em>&amp; Data-Driven Systems.</em>
+              <em>something good.</em>
             </h1>
             <p className="hero-description">{person.introduction}</p>
-            <div className="hero-actions">
-              <a className="btn btn-dark" href="#projects">
-                Explore my work <ArrowUpRight size={18} />
-              </a>
-              <a className="btn btn-outline" href="#about">
-                More about me <ArrowDownRight size={18} />
-              </a>
-            </div>
+            <p className="hero-connect-description">
+              I’m always happy to connect, learn from others, and explore
+              opportunities in web development, databases, and technology.
+            </p>
+            <ContactActions className="hero-actions" />
             <div className="hero-social">
               <span>FIND ME ON</span>
               <a
@@ -207,10 +207,9 @@ function Home() {
           <div className="image-main">
             <img
               src={person.portrait}
-              alt="Editable placeholder for Jove's portrait"
+              alt={person.name}
             />
           </div>
-          <span className="orbit-decoration">✳</span>
         </Reveal>
       </div>
     </section>
@@ -263,21 +262,21 @@ function About() {
             </Reveal>
             <Reveal delay={0.12} className="about-facts">
               <div>
-                <GraduationCap size={20} />
+               
                 <span>
                   <small>UNIVERSITY</small>
                   <b>MSU – Iligan Institute of Technology</b>
                 </span>
               </div>
               <div>
-                <Database size={20} />
+             
                 <span>
                   <small>SPECIALIZATION</small>
                   <b>Database Systems</b>
                 </span>
               </div>
               <div>
-                <Sparkles size={20} />
+                
                 <span>
                   <small>EXPECTED GRADUATION</small>
                   <b>{person.gradYear}</b>
@@ -321,8 +320,6 @@ function Skills() {
               <div className="skill-icon">
                 {i === 2 ? (
                   <Database size={25} />
-                ) : i === 3 ? (
-                  <Sparkles size={25} />
                 ) : (
                   <Code2 size={25} />
                 )}
@@ -403,18 +400,6 @@ function Projects() {
                     {p.stack.map((s) => (
                       <span key={s}>{s}</span>
                     ))}
-                  </div>
-                  <div className="project-footer">
-                    <span>{p.role}</span>
-                    {p.github ? (
-                      <a href={p.github} target="_blank" rel="noreferrer">
-                        View code <ArrowUpRight size={16} />
-                      </a>
-                    ) : (
-                      <span className="link-soon">
-                        GitHub link can be added <Github size={16} />
-                      </span>
-                    )}
                   </div>
                 </div>
               </motion.article>
@@ -615,7 +600,7 @@ function Leadership() {
     </section>
   );
 }
-function Contact() {
+function ContactActions({ className = "contact-actions" }) {
   const [copied, setCopied] = useState(false);
   const copy = async () => {
     try {
@@ -627,30 +612,36 @@ function Contact() {
     }
   };
   return (
+    <div className={className}>
+      <a className="btn btn-light" href={`mailto:${person.email}`}>
+        Say hello <Mail size={19} />
+      </a>
+      <button type="button" className="btn btn-ghost-light" onClick={copy}>
+        <span role="status" aria-live="polite">
+          {copied ? "Email copied!" : "Copy email"}
+        </span>
+        <ArrowUpRight size={17} />
+      </button>
+    </div>
+  );
+}
+function Contact() {
+  return (
     <section id="contact" className="contact-section">
       <div className="container">
         <div className="contact-top">
           <span>05 / LET’S CONNECT</span>
-          <span>HAVE AN IDEA IN MIND?</span>
+          <span>OPEN TO OPPORTUNITIES</span>
         </div>
         <Reveal>
           <h2>
-            Let’s make <br />
-            <em>something good.</em>
+           Have something in <br />
+            <em>mind?</em>
           </h2>
           <p>
-            I’m always happy to connect, learn from others, and explore
-            opportunities in web development, databases, and technology.
+            I'm always open to new opportunities, collaborations, and conversations. Feel free to reach out!
           </p>
-          <div className="contact-actions">
-            <a className="btn btn-light" href={`mailto:${person.email}`}>
-              Say hello <Mail size={19} />
-            </a>
-            <button className="btn btn-ghost-light" onClick={copy}>
-              {copied ? "Email copied!" : "Copy email"}{" "}
-              <ArrowUpRight size={17} />
-            </button>
-          </div>
+          <ContactActions />
         </Reveal>
         <div className="contact-links">
           <div>
@@ -685,7 +676,7 @@ function Footer() {
           Jove.
         </a>
         <span>
-          Designed & built with curiosity. © {new Date().getFullYear()}
+         © {new Date().getFullYear()}
         </span>
         <a href="#home">
           Back to top <ArrowUp size={16} />
