@@ -13,7 +13,7 @@ export const person = {
   github: "https://github.com/jovemarieltomaroy",
   linkedin: "https://www.linkedin.com/in/jovemarieltomaroy/",
   portrait: "/images/HomeProfile.png",
-  aboutImage: "/images/AboutProfile.jpeg",
+  aboutImage: "/images/about-portrait.png",
   resume: "/resume/Jove_Mariel_Tomaroy_CV.pdf",
   education: "BS Information Technology · Database Systems",
   university: "Mindanao State University – Iligan Institute of Technology",

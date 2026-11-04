@@ -231,7 +231,7 @@ function About() {
           <Reveal className="about-picture">
             <img
               src={person.aboutImage}
-              alt="Editable placeholder for an about-me or candid photo"
+              alt={`${person.name} wearing a black blazer against a cream wall`}
             />
           </Reveal>
           <div className="about-text">
