@@ -53,7 +53,7 @@ export const projects = [
       "A Christmas wish-tracking platform with QR-linked wish pages, donor reservations, and campaign tracking. Includes an officer dashboard for monitoring wishes, donors, fulfillment, and drop-offs.",
     stack: ["React", "Express", "Node.js", "MongoDB"],
     role: "Full-stack Developer",
-    image: "/images/WishLink.png",
+    image: "/images/Wishlink.jpeg",
     github: "",
     live: "",
   },
