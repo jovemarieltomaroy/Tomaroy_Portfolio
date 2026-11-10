@@ -1,4 +1,4 @@
-# Jove Mariel Tomaroy — Personal Portfolio
+# Jove Mariel Tomaroy Personal Portfolio
 
 A clean, responsive **React.js frontend** built with Vite. Inspired by the supplied desktop/mobile portfolio reference, with its own soft sage, warm off-white, and deep forest-green aesthetic.
 
@@ -51,16 +51,6 @@ Your uploaded CV is included in `public/resume/Jove_Mariel_Tomaroy_CV.pdf`. Repl
 
 The leadership section reflects entries in the provided CV. For the suggested speaker spotlight, a commented example is already in `src/content.js`; add the confirmed event name, year, exact role, and a photo before publishing the speaker claim. You can also edit the description in the leadership feature card in `src/App.jsx`.
 
-## Features
-
-- Six requested sections: Home, About, Skills, Projects, Leadership, Contact
-- Responsive desktop/tablet/mobile design with an animated mobile menu
-- Scroll entrance transitions, subtle hover effects, and smooth anchor navigation
-- Interactive project category filters
-- Résumé PDF download and direct social links
-- Contact email button and copy-to-clipboard action
-- Reduced-motion support for users who prefer it
-- No backend, database, API key, or environment variable required
 
 ## Tech stack
 
