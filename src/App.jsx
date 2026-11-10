@@ -35,13 +35,8 @@ const nav = [
   ["Leadership", "#leadership"],
   ["Contact", "#contact"],
 ];
-const SectionHeading = ({ index, kicker, title, description }) => (
+const SectionHeading = ({ title, description }) => (
   <div className="section-heading">
-    <div className="section-marker">
-      <span>{index}</span>
-      <span className="marker-line" />
-      {kicker}
-    </div>
     <h2>{title}</h2>
     {description && <p>{description}</p>}
   </div>
@@ -95,7 +90,7 @@ function Header() {
     <header className={`site-header ${scrolled ? "scrolled" : ""}`}>
       <div className="header-inner container">
         <a href="#home" className="nav-wordmark" onClick={() => setOpen(false)}>
-          Jove.
+          jove.
         </a>
         <nav className="desktop-nav" aria-label="Main navigation">
           {nav.map(([label, href]) => (
@@ -219,8 +214,6 @@ function About() {
     <section id="about" className="section about-section">
       <div className="container">
         <SectionHeading
-          index="01"
-          kicker="BEHIND THE SCREEN"
           title={
             <>
               A little about <em>me.</em>
@@ -299,8 +292,6 @@ function Skills() {
     <section id="skills" className="section skills-section">
       <div className="container">
         <SectionHeading
-          index="02"
-          kicker="WHAT I WORK WITH"
           title={
             <>
               My digital <em>toolkit.</em>
@@ -342,8 +333,6 @@ function Projects() {
       <div className="container">
         <div className="projects-intro">
           <SectionHeading
-            index="03"
-            kicker="SELECTED WORK"
             title={
               <>
                 Projects with <em>purpose.</em>
@@ -369,7 +358,6 @@ function Projects() {
                     src={p.image}
                     alt={`Screenshot placeholder for ${p.title}`}
                   />
-                  <span className="project-number">{p.no} / 04</span>
                   <span className="project-type">{p.tag}</span>
                 </div>
                 <div className="project-info">
@@ -549,8 +537,6 @@ function Leadership() {
     <section id="leadership" className="section leadership-section">
       <div className="container">
         <SectionHeading
-          index="04"
-          kicker="BEYOND THE CODE"
           title={
             <>
               Showing up. <em>Stepping up.</em>
@@ -612,7 +598,6 @@ function Contact() {
     <section id="contact" className="contact-section">
       <div className="container">
         <div className="contact-top">
-          <span>05 / LET’S CONNECT</span>
           <span>OPEN TO OPPORTUNITIES</span>
         </div>
         <Reveal>
@@ -655,7 +640,7 @@ function Footer() {
     <footer className="footer">
       <div className="container footer-inner">
         <a className="nav-wordmark" href="#home">
-          Jove.
+          jove.
         </a>
         <span>
          © {new Date().getFullYear()}

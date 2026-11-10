@@ -117,7 +117,7 @@ export const leadership = [
   {
     year: "2025 – 2026",
     role: "Deputy Chairperson of the Board / Board Member",
-    org: "MIDSA",
+    org: "MSU-IIT DOST-SEI Scholars’ Association",
     description:
       "Supported organizational planning, coordination, and student-led initiatives.",
     image: "",
@@ -125,7 +125,7 @@ export const leadership = [
   {
     year: "2023 – 2024",
     role: "Block Representative, IT Block A",
-    org: "CCS Student Council",
+    org: "College of Computer Studies - Student Council",
     description:
       "Represented students and helped coordinate concerns and communication.",
     image: "",
@@ -133,7 +133,7 @@ export const leadership = [
   {
     year: "2023 – 2025",
     role: "Associate, Executive Committee",
-    org: "MIDSA",
+    org: "MSU-IIT DOST-SEI Scholars’ Association",
     description: "Participated in organization activities and committee work.",
     image: "",
   },
